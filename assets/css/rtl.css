@@ -1,0 +1,22 @@
+/* ==========================================================================
+   rtl.css — Arabic (right-to-left) adjustments
+   Most layout is handled by logical properties; this file only holds the
+   few things that need an explicit flip. Loaded only on /ar/ pages.
+   ========================================================================== */
+
+[dir="rtl"] body { line-height: 1.85; }
+[dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] h4 { line-height: 1.4; letter-spacing: 0; }
+
+/* Directional icons (arrows / chevrons) are mirrored */
+[dir="rtl"] .icon--flip { transform: scaleX(-1); }
+
+/* Phone numbers, prices and emails stay left-to-right inside Arabic text */
+[dir="rtl"] .ltr, [dir="rtl"] [data-cfg="phone"], [dir="rtl"] [data-cfg="email"] {
+  direction: ltr; unicode-bidi: isolate; display: inline-block;
+}
+
+/* Bold price text looks better slightly smaller in Arabic numerals */
+[dir="rtl"] .price__now, [dir="rtl"] .stat__num { font-family: var(--font-ar); }
+
+/* Hero underline shape should hug the right side */
+[dir="rtl"] .hero h1 em::after { inset-inline: 0; }

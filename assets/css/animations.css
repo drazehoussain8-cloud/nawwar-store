@@ -1,0 +1,89 @@
+/* ==========================================================================
+   animations.css — Scroll reveals, keyframes, hover effects
+   All motion is disabled automatically for users who prefer reduced motion.
+   ========================================================================== */
+
+/* ---------- Scroll reveal (toggled by main.js via IntersectionObserver) ---------- */
+.js .reveal {
+  opacity: 0; transform: translateY(32px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+  transition-delay: var(--delay, 0ms);
+  will-change: opacity, transform;
+}
+.js .reveal--left { transform: translateX(-40px); }
+.js .reveal--right { transform: translateX(40px); }
+[dir="rtl"].js .reveal--left, .js[dir="rtl"] .reveal--left { transform: translateX(40px); }
+[dir="rtl"].js .reveal--right, .js[dir="rtl"] .reveal--right { transform: translateX(-40px); }
+.js .reveal--zoom { transform: scale(0.92); }
+.js .reveal.is-in { opacity: 1; transform: none; }
+
+/* ---------- Keyframes ---------- */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes floaty-slow {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(10px, -14px) scale(1.05); }
+}
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(31, 168, 85, 0.55); }
+  70% { box-shadow: 0 0 0 20px rgba(31, 168, 85, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(31, 168, 85, 0); }
+}
+@keyframes shine {
+  0% { transform: translateX(-120%) skewX(-20deg); }
+  60%, 100% { transform: translateX(260%) skewX(-20deg); }
+}
+@keyframes pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* ---------- Applied animations ---------- */
+.float-card--a { animation: floaty 5s ease-in-out infinite; }
+.float-card--b { animation: floaty 6s ease-in-out -2s infinite; }
+.hero__blob--1 { animation: floaty-slow 9s ease-in-out infinite; }
+.hero__blob--2 { animation: floaty-slow 11s ease-in-out -3s infinite; }
+.fab-wa { animation: pulse-ring 2.4s infinite; }
+.offer::after { animation: spin-slow 40s linear infinite; }
+.cta-band::before { animation: spin-slow 50s linear infinite; }
+
+/* Shine sweep on primary buttons */
+.btn--accent::after, .btn--wa::after {
+  content: ""; position: absolute; inset-block: 0; inset-inline-start: 0; width: 40%; z-index: -1;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+  transform: translateX(-120%) skewX(-20deg);
+  animation: shine 4s ease-in-out infinite;
+}
+
+/* Wishlist heart pop */
+.wish-btn.is-pop { animation: pop 0.45s var(--ease); }
+
+/* Hero entrance (runs on load, no scroll needed) */
+.hero__text > * { animation: slide-down 0.8s var(--ease) both; }
+.hero__text > *:nth-child(1) { animation-delay: 0.05s; }
+.hero__text > *:nth-child(2) { animation-delay: 0.15s; }
+.hero__text > *:nth-child(3) { animation-delay: 0.25s; }
+.hero__text > *:nth-child(4) { animation-delay: 0.35s; }
+.hero__text > *:nth-child(5) { animation-delay: 0.45s; }
+.hero__frame { animation: fade-in 1.1s var(--ease) both; }
+
+/* Underline slide on footer/nav links */
+.footer__links a:hover { padding-inline-start: 6px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .js .reveal { opacity: 1; transform: none; }
+}

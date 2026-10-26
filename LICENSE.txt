@@ -1,0 +1,21 @@
+NAWWAR STORE TEMPLATE — LICENSE
+Copyright (c) 2026 Draze Housain. All rights reserved.
+
+By purchasing this template you receive a non-exclusive, non-transferable license to:
+  - Use it for ONE end project (your own store or one client's store).
+  - Modify it freely for that project.
+
+You may NOT:
+  - Resell, redistribute, or share the template or its source files, in original or modified form.
+  - Upload it to marketplaces or free-download sites.
+  - Claim it as your own template product.
+
+Need to use it for more projects? Buy an extended license from the seller.
+
+The included illustrations are original demo artwork made for this template. You may use them inside the one project you license, but you may not extract and resell them separately.
+Third-party fonts are under their own licenses (see docs/THIRD-PARTY-LICENSES.md).
+
+The template is provided "as is", without warranty of any kind. The seller is not liable
+for any loss resulting from its use.
+
+Support: drazehoussain8@gmail.com

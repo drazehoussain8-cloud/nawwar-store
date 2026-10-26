@@ -1,0 +1,83 @@
+/* ==========================================================================
+   variables.css — Design tokens (colors, fonts, spacing, shadows)
+   Change the colors here and the whole template updates.
+   ========================================================================== */
+
+:root {
+  /* Brand colors */
+  --c-primary: #0e5a4b;      /* deep emerald */
+  --c-primary-700: #0a4538;
+  --c-primary-100: #d3e8e1;
+  --c-primary-50: #e9f4f0;
+  --c-accent: #f2a33a;       /* saffron gold */
+  --c-accent-600: #d98a1c;
+  --c-accent-100: #fdecd0;
+  --c-terra: #c8553d;        /* terracotta (badges, sale) */
+  --c-terra-100: #f8e1da;
+
+  /* Neutrals */
+  --c-ink: #1b2a26;
+  --c-text: #2e3d39;
+  --c-muted: #5f6f6a;
+  --c-line: #e8e1d2;
+  --c-bg: #fbf7ef;           /* warm cream */
+  --c-bg-alt: #f4ecdc;
+  --c-surface: #ffffff;
+
+  /* Messaging brand colors */
+  --c-wa: #1fa855;
+  --c-wa-700: #178a45;
+  --c-fb: #1877f2;
+  --c-ig: #d6249f;
+
+  /* Typography */
+  --font-ar: "Cairo", "Tajawal", system-ui, -apple-system, "Segoe UI", Tahoma, sans-serif;
+  --font-body-en: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-head-en: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: var(--font-body-en);
+  --font-head: var(--font-head-en);
+
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: clamp(1.25rem, 1.1rem + 0.7vw, 1.5rem);
+  --fs-2xl: clamp(1.5rem, 1.2rem + 1.4vw, 2.125rem);
+  --fs-3xl: clamp(1.875rem, 1.3rem + 2.6vw, 3rem);
+  --fs-4xl: clamp(2.25rem, 1.4rem + 4.2vw, 4rem);
+
+  /* Spacing */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --section-y: clamp(3.5rem, 2.5rem + 5vw, 6.5rem);
+  --gutter: clamp(1rem, 0.5rem + 2.5vw, 2rem);
+  --container: 1200px;
+
+  /* Shape & depth */
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-pill: 999px;
+  --shadow-sm: 0 2px 8px rgba(27, 42, 38, 0.06);
+  --shadow-md: 0 10px 30px rgba(27, 42, 38, 0.1);
+  --shadow-lg: 0 24px 60px rgba(14, 90, 75, 0.18);
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 0.8, 0.28, 1);
+  --t-fast: 0.2s;
+  --t-med: 0.45s;
+  --t-slow: 0.8s;
+
+  --header-h: 72px;
+}
+
+html[lang="ar"] {
+  --font-body: var(--font-ar);
+  --font-head: var(--font-ar);
+}

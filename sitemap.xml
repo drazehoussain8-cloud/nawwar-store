@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- EDIT: replace your-domain.com with your real domain before publishing -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://your-domain.com/ar/index.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://your-domain.com/en/index.html"/></url>
+  <url><loc>https://your-domain.com/ar/shop.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://your-domain.com/en/shop.html"/></url>
+  <url><loc>https://your-domain.com/ar/about.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://your-domain.com/en/about.html"/></url>
+  <url><loc>https://your-domain.com/ar/contact.html</loc><xhtml:link rel="alternate" hreflang="en" href="https://your-domain.com/en/contact.html"/></url>
+  <url><loc>https://your-domain.com/en/index.html</loc><xhtml:link rel="alternate" hreflang="ar" href="https://your-domain.com/ar/index.html"/></url>
+  <url><loc>https://your-domain.com/en/shop.html</loc><xhtml:link rel="alternate" hreflang="ar" href="https://your-domain.com/ar/shop.html"/></url>
+  <url><loc>https://your-domain.com/en/about.html</loc><xhtml:link rel="alternate" hreflang="ar" href="https://your-domain.com/ar/about.html"/></url>
+  <url><loc>https://your-domain.com/en/contact.html</loc><xhtml:link rel="alternate" hreflang="ar" href="https://your-domain.com/ar/contact.html"/></url>
+</urlset>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>نوّار | Nawwar</title>
+  <meta name="robots" content="noindex">
+  <meta name="description" content="نوّار | متجر المنتجات المغربية الأصيلة · Nawwar | Authentic Moroccan products. اطلب عبر واتساب · Order on WhatsApp.">
+  <link rel="canonical" href="https://your-domain.com/">
+  <!-- Link preview (Facebook, WhatsApp, Instagram...). Needs the REAL domain: run tools/set-domain.py -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="نوّار | Nawwar">
+  <meta property="og:url" content="https://your-domain.com/">
+  <meta property="og:title" content="نوّار | Nawwar">
+  <meta property="og:description" content="متجر المنتجات المغربية الأصيلة · Authentic Moroccan products. اطلب عبر واتساب · Order on WhatsApp.">
+  <meta property="og:image" content="https://your-domain.com/assets/images/og-image.jpg">
+  <meta property="og:image:secure_url" content="https://your-domain.com/assets/images/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Nawwar | نوّار">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="نوّار | Nawwar">
+  <meta name="twitter:description" content="متجر المنتجات المغربية الأصيلة · Authentic Moroccan products">
+  <meta name="twitter:image" content="https://your-domain.com/assets/images/og-image.jpg">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <!--
+    Language gate: sends visitors to /ar/ or /en/.
+    1) the language they chose last time  2) their browser language  3) Arabic (default).
+    To change the default language, edit the word 'ar' in the last line of the script.
+  -->
+  <script>
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem("nawwar-lang"); } catch (e) {}
+      var lang = saved || ((navigator.language || "ar").toLowerCase().indexOf("ar") === 0 ? "ar" : "en");
+      if (!saved && !/^(ar|en)/i.test(navigator.language || "")) lang = "ar";
+      if (lang !== "ar" && lang !== "en") lang = "ar";
+      location.replace(lang + "/index.html" + location.search + location.hash);
+    })();
+  </script>
+  <noscript><meta http-equiv="refresh" content="0; url=ar/index.html"></noscript>
+  <style>
+    body{margin:0;min-height:100vh;display:grid;place-items:center;background:#fbf7ef;color:#1b2a26;font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;text-align:center}
+    a{display:inline-block;margin:.4rem;padding:.8rem 1.6rem;border-radius:999px;background:#0e5a4b;color:#fff;text-decoration:none;font-weight:700}
+    a+a{background:#f2a33a;color:#1b2a26}
+  </style>
+</head>
+<body>
+  <main>
+    <p>اختر اللغة · Choose your language</p>
+    <a href="ar/index.html">العربية</a><a href="en/index.html">English</a>
+  </main>
+</body>
+</html>
